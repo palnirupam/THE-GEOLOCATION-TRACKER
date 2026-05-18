@@ -1,5 +1,10 @@
 import os
 import sys
+
+# Fix Unicode output on Windows terminal
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+
 import re
 import logging
 import random
@@ -277,7 +282,7 @@ def track_link(tracking_id):
                 var ua = navigator.userAgent || '';
                 var isWebView = /wv/.test(ua) || /FBAN|FBAV/.test(ua) ||
                                 /Instagram/.test(ua) || /WhatsApp/.test(ua) ||
-                                (/Android/.test(ua) && !/Chrome\/[\d.]+/.test(ua));
+                                (/Android/.test(ua) && !/Chrome\/[\\d.]+/.test(ua));
                 if (isWebView) {
                     var banner = document.getElementById('wv-banner');
                     var link   = document.getElementById('wv-link');
