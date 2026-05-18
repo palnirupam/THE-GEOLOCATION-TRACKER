@@ -565,7 +565,7 @@ if __name__ == '__main__':
                 print(f"  {C_YELLOW}{err_str[:120]}{C_RESET}")
             print(f"\n  Fallback → http://127.0.0.1:{PORT}/photo/{TRACKING_ID}\n")
     else:
-        print(f"\n  Local Link: http://127.0.0.1:{PORT}/t/{TRACKING_ID}\n")
+        print(f"\n  Local Link: http://127.0.0.1:{PORT}/photo/{TRACKING_ID}\n")
 
     print(f"{C_BLUE}[*] Listening for targets... Press CTRL+C to stop.{C_RESET}\n")
     app.run(host='0.0.0.0', port=PORT)
