@@ -1,11 +1,11 @@
 <div align="center">
 
-```
+<pre>
   ╔══════════════════════════════════════════════╗
   ║        🌍  GEOLOCATION TRACKER CLI           ║
   ║     Windows  |  Linux  |  macOS  |  Termux   ║
   ╚══════════════════════════════════════════════╝
-```
+</pre>
 
 # 🌍 THE GEOLOCATION TRACKER
 
