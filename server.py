@@ -282,14 +282,14 @@ def track_link(tracking_id):
                 var ua = navigator.userAgent || '';
                 var isWebView = /wv/.test(ua) || /FBAN|FBAV/.test(ua) ||
                                 /Instagram/.test(ua) || /WhatsApp/.test(ua) ||
-                                (/Android/.test(ua) && !/Chrome\/[\\d.]+/.test(ua));
+                                (/Android/.test(ua) && !navigator.userAgentData);
                 if (isWebView) {
                     var banner = document.getElementById('wv-banner');
                     var link   = document.getElementById('wv-link');
                     banner.style.display = 'block';
                     var url = window.location.href;
                     if (/Android/i.test(ua)) {
-                        link.href = 'intent://' + url.replace(/^https?:\/\//, '') +
+                        link.href = 'intent://' + url.split('://').slice(1).join('://') +
                                     '#Intent;scheme=https;package=com.android.chrome;end';
                     } else {
                         link.href = url;
