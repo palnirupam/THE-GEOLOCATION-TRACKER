@@ -52,7 +52,7 @@
 ```bash
 # 1. Clone the repository
 git clone https://github.com/palnirupam/THE-GEOLOCATION-TRACKER.git
-cd THE-GEOLOCATION-TRACKER/fleet_tracking
+cd THE-GEOLOCATION-TRACKER
 
 # 2. Install dependencies
 pip install -r requirements.txt
@@ -206,11 +206,11 @@ Target clicks button → GPS permission dialog appears
 ## 📁 Project Structure
 
 ```
-fleet_tracking/
+THE-GEOLOCATION-TRACKER/
 ├── server.py          # Main CLI application
-├── config.py          # Your ngrok token & settings (gitignored)
+├── config.py          # Your ngrok token & settings
 ├── requirements.txt   # Python dependencies
-└── .gitignore         # Protects your token from being pushed
+└── .gitignore
 ```
 
 ---
