@@ -7,7 +7,20 @@ import string
 import requests as http_requests
 from flask import Flask, request, jsonify, render_template_string, make_response
 import user_agents as ua_parser
-from config import NGROK_AUTHTOKEN, NGROK_DOMAIN
+
+# Graceful config import — works even if config.py doesn't exist yet
+try:
+    from config import NGROK_AUTHTOKEN, NGROK_DOMAIN
+except ImportError:
+    import shutil, os as _os
+    _example = _os.path.join(_os.path.dirname(__file__), 'config.example.py')
+    _config  = _os.path.join(_os.path.dirname(__file__), 'config.py')
+    if _os.path.exists(_example):
+        shutil.copy(_example, _config)
+        print("\n[!] config.py not found — created from config.example.py")
+        print("    Add your NGROK_AUTHTOKEN in config.py and restart.\n")
+    NGROK_AUTHTOKEN = ""
+    NGROK_DOMAIN    = ""
 
 # Suppress Flask/Werkzeug logs
 sys.modules['flask.cli'].show_server_banner = lambda *x: None
