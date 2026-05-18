@@ -1,12 +1,5 @@
 <div align="center">
 
-<pre>
-  ╔══════════════════════════════════════════════╗
-  ║        🌍  GEOLOCATION TRACKER CLI           ║
-  ║     Windows  |  Linux  |  macOS  |  Termux   ║
-  ╚══════════════════════════════════════════════╝
-</pre>
-
 # 🌍 THE GEOLOCATION TRACKER
 
 **A powerful terminal-based geo-tracking tool that captures precise GPS coordinates, device specifications, and network intelligence from any target — silently, via a single link.**
